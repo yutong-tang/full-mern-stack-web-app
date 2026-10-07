@@ -78,5 +78,18 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to handle fetching the About Us content
+app.get('/about-us', (req, res) => {
+  res.json({
+    title: 'About Us',
+    paragraphs: [
+      "Hi, I'm Yutong, a student at NYU Abu Dhabi.",
+      'I am really interested in the combination of ideas and code through different forms of storytelling.',
+      'I wish I will be able to work on more about how to land a project.',
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
